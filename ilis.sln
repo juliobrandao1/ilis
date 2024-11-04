@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ilis", "ilis.csproj", "{EA877172-78A9-4F33-AC72-13C563D9AC38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA877172-78A9-4F33-AC72-13C563D9AC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA877172-78A9-4F33-AC72-13C563D9AC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA877172-78A9-4F33-AC72-13C563D9AC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA877172-78A9-4F33-AC72-13C563D9AC38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C568CB38-EBB7-488C-A323-FDB91E31A0F9}
+	EndGlobalSection
+EndGlobal
