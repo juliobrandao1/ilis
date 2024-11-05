@@ -257,3 +257,4 @@ C:\Projetos\ilis\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.System
 C:\Projetos\ilis\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Projetos\ilis\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Projetos\ilis\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Projetos\ilis\obj\Debug\net8.0\ilis.sourcelink.json
