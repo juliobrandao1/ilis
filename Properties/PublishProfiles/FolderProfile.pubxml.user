@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Projetos\ilis_prod</_PublishTargetUrl>
+    <History>True|2024-11-06T11:15:32.1242198Z;True|2024-11-05T18:27:21.1050912-03:00;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=localhost%3bDatabase=ilis%3bUser Id=sa%3bPassword=sql!%40#123%3bTrustServerCertificate=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="MyApp.Data.ApplicationDbContext">
+      <Value>Server=localhost%3bDatabase=ilis%3bUser Id=sa%3bPassword=sql!%40#123%3bTrustServerCertificate=true</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
