@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ilis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc8064a4c1790a48a52665531f17af004a51c705")]
 [assembly: System.Reflection.AssemblyProductAttribute("ilis")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ilis")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
