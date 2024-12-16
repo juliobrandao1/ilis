@@ -21,9 +21,110 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <!-- Item Perfil com submenu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Recepção
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Pedidos</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Lib. Cortesia / Ética Médica</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Preços / Preparo</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Registro de Orçamentos</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Geral</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Coletas Domiciliares</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Lancto. Part.</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Fechar Caixa</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alterar p/ Nome Social</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alterar Posto</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Prazo de Exames</a></li>
+                                   
+                                </ul>
+                            </li>
+
+                            <!-- Item Configurações com submenu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdowEnvio de Materialn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Transf. Materiais
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Lotes de Transferência</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Gera Transferência</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Envio de Material</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Recebimento Material</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Posto Base</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Lotes</a></li>
+
+                                </ul>
+                            </li>
+
+                            <!-- Item Configurações com submenu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Triagem
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Triagem</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Etiquetas Apoio</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Excluir Todas Etiquetas Dasa</a></li>
+
+                                </ul>
+                            </li>
+                            <!-- Item Configurações com submenu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Técnico
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Resultados</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Recoletas</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Res. Neg. em Lote</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Resultado NEG PPF Transf.</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Ver Layout</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Notificações</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Selecionar Responsável</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Log Responsáveis TM</a></li>
+                                </ul>
+                            </li>
+                                                        <!-- Item Configurações com submenu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Liberação de Laudos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Assinatura</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Laudos Assinados</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Cancelar Laudo</a></li>
+
+                                </ul>
+                            </li>
+                            <!-- Item Configurações com submenu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Emissão de Laudos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Lotes</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Gerar Lote</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alt Sts Impressão</a></li>
+
+                                </ul>
+                            </li>
+                             <!-- Item Configurações com submenu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Requisição de Materiais
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Requisição Material</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Avaliações Críticas</a></li>
+
+                                </ul>
+                            </li>
+
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

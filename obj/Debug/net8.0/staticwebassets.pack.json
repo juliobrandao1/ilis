@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\images\\logo_1.png"
     },
     {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\images\\logo_3.png",
+      "PackagePath": "staticwebassets\\images\\logo_3.png"
+    },
+    {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\images\\logo_4.png",
+      "PackagePath": "staticwebassets\\images\\logo_4.png"
+    },
+    {
       "Id": "C:\\Projetos\\ilis\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

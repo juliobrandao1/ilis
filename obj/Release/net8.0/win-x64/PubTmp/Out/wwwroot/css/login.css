@@ -1,0 +1,54 @@
+﻿body {
+    background-color: #f7f7f7;
+}
+
+h1, h2, h3 {
+    color: #6c757d;
+}
+
+.form-control, .form-check-input, .btn-primary {
+    background-color: #e0f7fa;
+    border-color: #b2ebf2;
+    color: #00796b;
+}
+
+    .form-control:focus, .btn-primary:focus {
+        background-color: #b2ebf2;
+        border-color: #80deea;
+        color: #004d40;
+    }
+
+.btn-primary {
+    background-color: #80deea;
+    border-color: #4dd0e1;
+}
+
+    .btn-primary:hover {
+        background-color: #4dd0e1;
+        border-color: #26c6da;
+    }
+
+.text-danger {
+    color: #d32f2f;
+}
+
+.form-label {
+    color: #00796b;
+}
+
+.checkbox label {
+    color: #00796b;
+}
+
+a {
+    color: #00796b;
+}
+
+    a:hover {
+        color: #004d40;
+    }
+
+.short-input {
+    max-width: 300px;
+    margin: 0 auto;
+}
