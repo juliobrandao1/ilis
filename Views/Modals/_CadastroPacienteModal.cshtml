@@ -1,0 +1,93 @@
+﻿@* _CadastroPacienteModal.cshtml *@
+<div class="modal fade" id="cadastroPacienteModal" tabindex="-1" role="dialog" aria-labelledby="cadastroPacienteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadastroPacienteModalLabel">Cadastro de Paciente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="cadastroPacienteForm">
+                    <div class="form-group">
+                        <label for="Nome">Nome:</label>
+                        <input type="text" class="form-control" id="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Sobrenome">Sobrenome:</label>
+                        <input type="text" class="form-control" id="Sobrenome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="RG">RG:</label>
+                        <input type="text" class="form-control" id="RG">
+                    </div>
+                    <div class="form-group">
+                        <label for="CPF">CPF:</label>
+                        <input type="text" class="form-control" id="CPF" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="CNS">CNS:</label>
+                        <input type="text" class="form-control" id="CNS">
+                    </div>
+                    <div class="form-group">
+                        <label for="Endereco">Endereço:</label>
+                        <input type="text" class="form-control" id="Endereco">
+                    </div>
+                    <div class="form-group">
+                        <label for="Bairro">Bairro:</label>
+                        <input type="text" class="form-control" id="Bairro">
+                    </div>
+                    <div class="form-group">
+                        <label for="CEP">CEP:</label>
+                        <input type="text" class="form-control" id="CEP">
+                    </div>
+                    <div class="form-group">
+                        <label for="Cidade">Cidade:</label>
+                        <input type="text" class="form-control" id="Cidade">
+                    </div>
+                    <div class="form-group">
+                        <label for="DtaNascimento">Data de Nascimento:</label>
+                        <input type="date" class="form-control" id="DtaNascimento">
+                    </div>
+                    <div class="form-group">
+                        <label for="Sexo">Sexo:</label>
+                        <select class="form-control" id="Sexo">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                        <input type="text" class="form-control" id="Sexo" maxlength="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="Preferencial">Preferencial:</label>
+                        <select class="form-control" id="Preferencial">
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="CodAcesso">CodAcesso:</label>
+                        <input type="text" class="form-control" id="CodAcesso">
+                    </div>
+                    <div class="form-group">
+                        <label for="Telefone">Telefone:</label>
+                        <input type="text" class="form-control" id="Telefone">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input type="email" class="form-control" id="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Celular">Celular:</label>
+                        <input type="text" class="form-control" id="Celular">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="savePacienteBtn">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

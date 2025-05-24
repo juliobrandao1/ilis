@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Dados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <style>
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+            .form-group label {
+                width: 150px; /* Ajuste conforme necessário */
+            }
+
+            .form-group input,
+            .form-group select {
+                flex: 1;
+            }
+
+        .search-results {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            .search-results li {
+                margin: 5px 0;
+            }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="~/js/paciente.js"></script>
+    <script src="~/js/cadastro.js"></script>
+    <script src="~/js/medico.js"></script>
+    <script src="~/js/requisicao.js"></script>
+
+</head>
+<body>
+    <h1>Cadastro</h1>
+
+    @if (TempData["Mensagem"] != null)
+    {
+        <p style="color: green;">@TempData["Mensagem"]</p>
+    }
+
+    <form method="post" id="my-form">
+        <div class="form-group">
+            <label for="Numero">Número:</label>
+            <input id="Numero" name="Numero" type="text" value="00001" disabled="True" />
+        </div>
+        <div class="form-group">
+            <label for="Paciente">Paciente:</label>
+            <input id="Paciente" name="Paciente" type="text" />
+            <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#cadastroPacienteModal">
+                <i class="fas fa-user-plus"></i> Novo
+            </button>
+        </div>
+        <div class="form-group">
+            <label for="Medico">Médico:</label>
+            <input id="Medico" name="Medico" type="text" value="@Model.Medico" />
+            <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#cadastroMedicoModal">
+                <i class="fas fa-user-plus"></i> Novo
+            </button>
+        </div>
+        <div class="form-group">
+            <label for="Posto">Posto:</label>
+            <input id="Posto" name="Posto" type="number" value="@Model.Posto" />
+        </div>
+        <div class="form-group">
+            <label for="Contrato">Contrato:</label>
+            <input id="Contrato" name="Contrato" type="number" value="@Model.Contrato" />
+        </div>
+        <div class="form-group">
+            <label for="Plano">Plano:</label>
+            <input id="Plano" name="Plano" type="text" value="@Model.Plano" />
+        </div>
+        <div class="form-group">
+            <label for="DataPedido">Data do Pedido:</label>
+            <input id="DataPedido" name="DataPedido" type="date" value="2025-01-01" min="2025-01-01" />
+        </div>
+        <div class="form-group">
+            <label for="Sexo">Sexo:</label>
+            <input id="Sexo" name="Sexo" type="text" value="@Model.Sexo" />
+        </div>
+        <div class="form-group">
+            <label for="Email">E-mail:</label>
+            <input id="Email" name="Email" type="email" value="@Model.Email" />
+        </div>
+        <div class="form-group">
+            <label for="Carteirinha">Carteirinha:</label>
+            <input id="Carteirinha" name="Carteirinha" type="text" value="@Model.NumeroCarteirinha" />
+        </div>
+        <div class="form-group">
+            <label for="ValidadeCarteirinha">Validade:</label>
+            <input id="ValidadeCarteirinha" name="ValidadeCarteirinha" type="date" value="2025-01-01" min="2025-01-01" />
+        </div>
+        <div class="form-group">
+            <label for="Leito">Leito:</label>
+            <input id="Leito" name="Leito" type="text" value="@Model.Leito" />
+        </div>
+        <div class="form-group">
+            <label for="DtaNascimento">Data de Nascimento:</label>
+            <input id="DtaNascimento" name="DtaNascimento" type="date" value="2025-01-01" min="2025-01-01" />
+        </div>
+        <div class="form-group">
+            <label for="Medicamentos">Medicamentos:</label>
+            <input id="Medicamentos" name="Medicamentos" type="text" value="@Model.Medicamentos" />
+        </div>
+        <div class="form-group">
+            <label for="Observacao">OBS:</label>
+            <input id="Observacao" name="Observacao" type="text" value="@Model.Observacao" />
+        </div>
+        <div class="button-group">
+            <button type="button" onclick="saveRequisicaoBtn()">Salvar</button>
+            <button type="button" onclick="history.back()">Voltar</button>
+        </div>
+    </form>
+
+    @* Incluir os modais *@
+    @Html.Partial("../Modals/_PacienteModal")
+    @Html.Partial("../Modals/_CadastroPacienteModal")
+    @Html.Partial("../Modals/_MedicoModal")
+    @Html.Partial("../Modals/_CadastroMedicoModal")
+
+</body>
+</html>

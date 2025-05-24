@@ -39,6 +39,15 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "cadastro",
+    pattern: "{controller=Cadastro}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "exame",
+    pattern: "{controller=Exame}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "requisicao",
+    pattern: "{controller=Requisicao}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

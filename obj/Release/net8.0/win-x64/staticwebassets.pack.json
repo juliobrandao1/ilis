@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Projetos\\ilis\\obj\\Release\\net8.0\\win-x64\\scopedcss\\projectbundle\\ilis.bundle.scp.css",
-      "PackagePath": "staticwebassets\\ilis.bundle.scp.css"
+      "PackagePath": "staticwebassets\\ilis.7c8jwiv0y7.bundle.scp.css"
     },
     {
       "Id": "C:\\Projetos\\ilis\\wwwroot\\css\\login.css",
@@ -23,6 +23,14 @@
     {
       "Id": "C:\\Projetos\\ilis\\wwwroot\\images\\logo_1.png",
       "PackagePath": "staticwebassets\\images\\logo_1.png"
+    },
+    {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\images\\logo_3.png",
+      "PackagePath": "staticwebassets\\images\\logo_3.png"
+    },
+    {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\images\\logo_4.png",
+      "PackagePath": "staticwebassets\\images\\logo_4.png"
     },
     {
       "Id": "C:\\Projetos\\ilis\\wwwroot\\js\\site.js",
@@ -267,6 +275,10 @@
     {
       "Id": "obj\\Release\\net8.0\\win-x64\\staticwebassets\\msbuild.buildTransitive.ilis.props",
       "PackagePath": "buildTransitive\\ilis.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\win-x64\\staticwebassets\\msbuild.ilis.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Release\\net8.0\\win-x64\\staticwebassets\\msbuild.ilis.Microsoft.AspNetCore.StaticWebAssets.props",

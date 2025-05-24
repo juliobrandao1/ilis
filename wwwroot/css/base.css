@@ -1,0 +1,88 @@
+﻿/* Configuração do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Azul bem claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #dbe2ef; /* Borda azul clara */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #3f72af; /* Azul médio */
+    margin-bottom: 20px;
+}
+
+/* Estilo dos labels */
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #112d4e; /* Azul escuro */
+    margin-bottom: 0px;
+}
+
+/* Estilo dos inputs */
+input, select {
+    width: 50%;
+    height: 4px;
+    padding: 8px;
+    font-size: 14px;
+    color: #3f72af; /* Azul médio */
+    border: 2px solid #dbe2ef; /* Borda azul clara */
+    border-radius: 4px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+}
+
+    input:focus, select:focus {
+        outline: none;
+        border-color: #3f72af; /* Azul médio */
+        box-shadow: 0 0 5px rgba(63, 114, 175, 0.5);
+    }
+
+/* Botões */
+.button-group {
+    text-align: center;
+}
+
+button {
+    background-color: #3f72af; /* Azul médio */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #112d4e; /* Azul escuro */
+    }
+
+    button:disabled {
+        background-color: #dbe2ef; /* Azul claro */
+        cursor: not-allowed;
+    }
+
+/* Mensagem de sucesso */
+.success-message {
+    text-align: center;
+    color: #2e7d32; /* Verde escuro */
+    margin-bottom: 20px;
+    font-weight: bold;
+}

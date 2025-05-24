@@ -2,7 +2,11 @@
   "Files": [
     {
       "Id": "C:\\Projetos\\ilis\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ilis.bundle.scp.css",
-      "PackagePath": "staticwebassets\\ilis.bundle.scp.css"
+      "PackagePath": "staticwebassets\\ilis.7c8jwiv0y7.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\css\\base.css",
+      "PackagePath": "staticwebassets\\css\\base.css"
     },
     {
       "Id": "C:\\Projetos\\ilis\\wwwroot\\css\\login.css",
@@ -31,6 +35,22 @@
     {
       "Id": "C:\\Projetos\\ilis\\wwwroot\\images\\logo_4.png",
       "PackagePath": "staticwebassets\\images\\logo_4.png"
+    },
+    {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\js\\cadastro.js",
+      "PackagePath": "staticwebassets\\js\\cadastro.js"
+    },
+    {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\js\\medico.js",
+      "PackagePath": "staticwebassets\\js\\medico.js"
+    },
+    {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\js\\paciente.js",
+      "PackagePath": "staticwebassets\\js\\paciente.js"
+    },
+    {
+      "Id": "C:\\Projetos\\ilis\\wwwroot\\js\\requisicao.js",
+      "PackagePath": "staticwebassets\\js\\requisicao.js"
     },
     {
       "Id": "C:\\Projetos\\ilis\\wwwroot\\js\\site.js",
@@ -275,6 +295,10 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ilis.props",
       "PackagePath": "buildTransitive\\ilis.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ilis.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ilis.Microsoft.AspNetCore.StaticWebAssets.props",

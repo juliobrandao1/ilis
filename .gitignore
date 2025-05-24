@@ -4,3 +4,5 @@
 
 /.vs
 /.config
+/bin
+/obj/Debug/net8.0/win-x64/PubTmp/

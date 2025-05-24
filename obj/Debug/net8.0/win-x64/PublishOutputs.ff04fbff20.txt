@@ -1,0 +1,6 @@
+C:\Projetos\ilis\obj\Debug\net8.0\win-x64\PubTmp\Out\appsettings.Development.json
+C:\Projetos\ilis\obj\Debug\net8.0\win-x64\PubTmp\Out\appsettings.json
+C:\Projetos\ilis\obj\Debug\net8.0\win-x64\PubTmp\Out\ilis.pdb
+C:\Projetos\ilis\obj\Debug\net8.0\win-x64\PubTmp\Out\aspnetcorev2_inprocess.dll
+C:\Projetos\ilis\obj\Debug\net8.0\win-x64\PubTmp\Out\Microsoft.Data.SqlClient.SNI.dll
+C:\Projetos\ilis\obj\Debug\net8.0\win-x64\PubTmp\Out\ilis.exe

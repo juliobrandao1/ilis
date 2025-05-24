@@ -1,150 +1,468 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - I Lis</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ilis.styles.css" asp-append-version="true" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - I Lis</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/ilis.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+			<div class="container-fluid">
+				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+					<ul class="navbar-nav flex-grow-1">
+						<li class="nav-item">
+							<img src="~/images/logo_0.png" alt="Logotipo" class="mb-4" style="max-width: 35px;" />
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+						</li>
+						@if (User.Identity.IsAuthenticated)
+						{
+							<!-- Item Perfil com submenu -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="menuPaiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Rotina
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="menuPaiDropdown">
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">Recepção</a>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Pedidos</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Cadastro" asp-action="Index">Cadastro</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Lib. Cortesia / Ética Médica</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Preços / Preparo</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Registro de Orçamentos</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Geral</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Coletas Domiciliares</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Lancto. Part.</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Fechar Caixa</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alterar p/ Nome Social</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alterar Posto</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Prazo de Exames</a></li>
+										</ul>
+									</li>
+									<!-- Item Configurações com submenu -->
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">
+											Transf. Materiais
+										</a>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Lotes de Transferência</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Gera Transferência</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Envio de Material</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Recebimento Material</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Posto Base</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Lotes</a></li>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <img src="~/images/logo_0.png" alt="Logotipo" class="mb-4" style="max-width: 35px;" />
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <!-- Item Perfil com submenu -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="perfilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Recepção
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Pedidos</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Lib. Cortesia / Ética Médica</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Preços / Preparo</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Registro de Orçamentos</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Geral</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Coletas Domiciliares</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Lancto. Part.</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Fechar Caixa</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alterar p/ Nome Social</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alterar Posto</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Prazo de Exames</a></li>
-                                   
-                                </ul>
-                            </li>
+										</ul>
+									</li>
 
-                            <!-- Item Configurações com submenu -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdowEnvio de Materialn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Transf. Materiais
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Lotes de Transferência</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Gera Transferência</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Envio de Material</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Recebimento Material</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Posto Base</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Consulta Lotes</a></li>
+									<!-- Item Configurações com submenu -->
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">
+											Triagem
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Triagem</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Etiquetas Apoio</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Excluir Todas Etiquetas Dasa</a></li>
 
-                                </ul>
-                            </li>
+										</ul>
+									</li>
+									<!-- Item Configurações com submenu -->
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">
+											Técnico
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Resultados</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Recoletas</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Res. Neg. em Lote</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Resultado NEG PPF Transf.</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Ver Layout</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Notificações</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Selecionar Responsável</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Log Responsáveis TM</a></li>
+										</ul>
+									</li>
+									<!-- Item Configurações com submenu -->
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">
+											Liberação de Laudos
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Assinatura</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Laudos Assinados</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Cancelar Laudo</a></li>
 
-                            <!-- Item Configurações com submenu -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Triagem
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Triagem</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Etiquetas Apoio</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Excluir Todas Etiquetas Dasa</a></li>
+										</ul>
+									</li>
+									<!-- Item Configurações com submenu -->
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">
+											Emissão de Laudos
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Lotes</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Gerar Lote</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alt Sts Impressão</a></li>
 
-                                </ul>
-                            </li>
-                            <!-- Item Configurações com submenu -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Técnico
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Resultados</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Recoletas</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Res. Neg. em Lote</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Resultado NEG PPF Transf.</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Ver Layout</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Notificações</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Selecionar Responsável</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Log Responsáveis TM</a></li>
-                                </ul>
-                            </li>
-                                                        <!-- Item Configurações com submenu -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Liberação de Laudos
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Assinatura</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Laudos Assinados</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Cancelar Laudo</a></li>
+										</ul>
+									</li>
+									<!-- Item Configurações com submenu -->
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">
+											Requisição de Materiais
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="perfilDropdown">
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Requisição Material</a></li>
+											<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Avaliações Críticas</a></li>
 
-                                </ul>
-                            </li>
-                            <!-- Item Configurações com submenu -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Emissão de Laudos
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Lotes</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Gerar Lote</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Activity">Alt Sts Impressão</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
 
-                                </ul>
-                            </li>
-                             <!-- Item Configurações com submenu -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="configuracoesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Requisição de Materiais
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="perfilDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Requisição Material</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="EditProfile">Avaliações Críticas</a></li>
+							<!-- Item Perfil com submenu -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="menuPaiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Consultório
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="menuPaiDropdown">
+									<li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Pedidos / Laudos</a></li>
 
-                                </ul>
-                            </li>
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Ver Pedidos
+										</a>
+									</li>
 
-                        }
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Microbiologia HSA
+										</a>
+									</li>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - ilis - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Microbiologia HCSG
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Microbiologia 002 e 044
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Laudos de Outros Postos
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Imprimir Laudos por Lote
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Recoletas Solicitadas
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Consulta Laudos
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Preços / Preparo (Medic Plus)
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Recoletas Críticas
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Preços / Preparo (Pró Saúde)
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Pesquisa Paciente
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Preparo Paciente (SUS Carguá)
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Ver Notificações
+										</a>
+									</li>
+								</ul>
+							</li>
+
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="menuPaiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									B2B - Comunicação
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="menuPaiDropdown">
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">Consulta</a>
+										<ul class="dropdown-menu">
+
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Lotes Enviados
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Pedidos Enviados
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Arquivos Enviados
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Laudos Enviados B64
+												</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">TRANSFERÊNCIA</a>
+
+										<ul class="dropdown-menu">
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Envio de Pedidos
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Recebimento de Resultados
+												</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">CÓDIGOS</a>
+
+										<ul class="dropdown-menu">
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Exames (Envio)
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Exames (Recebimento)
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Unidades SUS
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Códigos Fixos
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Postos Origem
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Postos Destino
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Contratos
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Conselhos
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Médicos
+												</a>
+											</li>
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Usuários Liberados
+												</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">DOCUMENTAÇÃO</a>
+
+										<ul class="dropdown-menu">
+
+											<li>
+												<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+													Fazer Download
+												</a>
+											</li>
+										</ul>
+									</li>
+
+
+								</ul>
+							</li>
+
+							<!-- Item Perfil com submenu -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="menuPaiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transf. de Dados</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Gerar Arquivo
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Arquivos Gerados
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Interfaceamento
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Cancelar Pedido Apoio
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Massa de Dados Caraguá
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Interface Lisnet
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Interface Equipamentos
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Importação DASA
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Importação DB
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Interface Pendente DB (Teste Não usar)
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Importação Apoio Específico
+										</a>
+									</li>
+
+									<li>
+										<a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">
+											Arquivo HFOCUS
+										</a>
+									</li>
+								</ul>
+							</li>
+
+					
+					
+
+						}
+					</ul>
+					 <partial name="_LoginPartial" />
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			&copy; 2024 - ilis - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+		</div>
+	</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ilis.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace MyApp.Data
@@ -9,5 +10,8 @@ namespace MyApp.Data
             : base(options)
         {
         }
+        public DbSet<Paciente> Paciente { get; set; }
+        public DbSet<Requisicao> Requisicao { get; set; }
+        public DbSet<Medico> Medico { get; set; }
     }
 }

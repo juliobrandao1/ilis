@@ -1,0 +1,101 @@
+﻿@* _CadastroMedicoModal.cshtml *@
+<div class="modal fade" id="cadastroMedicoModal" tabindex="-1" role="dialog" aria-labelledby="cadastroMedicoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadastroMedicoModalLabel">Cadastro de Médico</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="cadastroMedicoForm">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="NomeMedico" maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" class="form-control" id="EnderecoMedico" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" class="form-control" id="BairroMedico" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">CEP:</label>
+                        <input type="text" class="form-control" id="CepMedico" maxlength="9">
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" class="form-control" id="CidadeMedico" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" class="form-control" id="TelefoneMedico" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoConselho">Tipo Conselho:</label>
+                        <input type="number" class="form-control" id="TipoConselhoMedico">
+                    </div>
+                    <div class="form-group">
+                        <label for="crm">CRM:</label>
+                        <input type="text" class="form-control" id="CRMMedico" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label>
+                        <input type="text" class="form-control" id="SexoMedico" maxlength="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="porc">Porcentagem:</label>
+                        <input type="text" class="form-control" id="PorcMedico" maxlength="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="interno">Interno:</label>
+                        <input type="number" step="0.00001" class="form-control" id="InternoMedico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="externo">Externo:</label>
+                        <input type="number" step="0.00001" class="form-control" id="ExternoMedico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="codUnimed">Código Unimed:</label>
+                        <input type="text" class="form-control" id="CodUnimedMedico" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="vinUnimed">Vínculo Unimed:</label>
+                        <input type="text" class="form-control" id="VinUnimedMedico" maxlength="2">
+                    </div>
+                    <div class="form-group">
+                        <label for="espUnimed">Especialidade Unimed:</label>
+                        <input type="text" class="form-control" id="EspUnimedMedico" maxlength="3">
+                    </div>
+                    <div class="form-group">
+                        <label for="codSUS">Código SUS:</label>
+                        <input type="text" class="form-control" id="CodSUSMedico" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="cBOS">CBOS:</label>
+                        <input type="text" class="form-control" id="cBOSMedico" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="senhaInternet">Senha Internet:</label>
+                        <input type="text" class="form-control" id="SenhaInternetMedico" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="estrangeiro">Estrangeiro:</label>
+                        <input type="text" class="form-control" id="EstrangeiroMedico" maxlength="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="stAtivo">Status Ativo:</label>
+                        <input type="text" class="form-control" id="stAtivoMedico" maxlength="1">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="saveMedicoBtn">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

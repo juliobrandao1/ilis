@@ -12,11 +12,101 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+/*Logo*/
+.mb-4 {
+    border-radius: 30%;
+    border: 0px solid #00796b;
+}
+
+/*FRASE LOGIN*/
+.display-4 {
+    font-family: 'Orbitron', sans-serif; /* Escolha uma fonte futurista */
+    font-size: 3em; /* Tamanho grande para se destacar */
+    /*/color: #00ffff; /* Cor ciano brilhante para um efeito futurista */
+    color: #139e9e; 
+    text-shadow: 0 0 3px #00ffff, 0 0 5px #00ffff, 0 0 6px #00ffff;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00ffff, 0 0 3px #00ffff, 0 0 8px #00ffff;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #00ffff, 0 0 3px #00ffff, 0 0 8px #00ffff;
+    }
+}
+
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
   margin-bottom: 60px;
+}
+/* Estilos Gerais do Menu */
+.navbar {
+    background-color: #00796b;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* Estilo para todos os links de navegação */
+.navbar-nav .nav-link, .navbar-nav .dropdown-item {
+    color: #00796b !important;    
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 0 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+    /* Hover para links de navegação */
+    .navbar-nav .nav-link:hover, .navbar-nav .dropdown-item:hover {
+        color: #004d40;
+        background-color: #b2dfdb;
+    }
+
+/* Menu Dropdown */
+.navbar-nav .dropdown-menu {
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin-top: -1px;
+        background-color: #e0f2f1;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+
+/* Logo */
+.navbar-nav img {
+    max-width: 40px;
+    margin-right: 10px;
+    border-radius: 40%;
+    border: 1px solid #00796b;
+}
+navbar-light .navbar-nav .nav-link {
+    color: #00796b;
 }

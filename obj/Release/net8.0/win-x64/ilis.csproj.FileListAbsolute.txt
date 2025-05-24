@@ -74,7 +74,6 @@ C:\Projetos\ilis\bin\Release\net8.0\win-x64\System.Composition.Runtime.dll
 C:\Projetos\ilis\bin\Release\net8.0\win-x64\System.Composition.TypedParts.dll
 C:\Projetos\ilis\bin\Release\net8.0\win-x64\System.Configuration.ConfigurationManager.dll
 C:\Projetos\ilis\bin\Release\net8.0\win-x64\System.Drawing.Common.dll
-C:\Projetos\ilis\bin\Release\net8.0\win-x64\System.Formats.Asn1.dll
 C:\Projetos\ilis\bin\Release\net8.0\win-x64\System.IdentityModel.Tokens.Jwt.dll
 C:\Projetos\ilis\bin\Release\net8.0\win-x64\System.Memory.Data.dll
 C:\Projetos\ilis\bin\Release\net8.0\win-x64\System.Reflection.MetadataLoadContext.dll
@@ -242,9 +241,13 @@ C:\Projetos\ilis\obj\Release\net8.0\win-x64\staticwebassets.pack.json
 C:\Projetos\ilis\obj\Release\net8.0\win-x64\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Projetos\ilis\obj\Release\net8.0\win-x64\scopedcss\bundle\ilis.styles.css
 C:\Projetos\ilis\obj\Release\net8.0\win-x64\scopedcss\projectbundle\ilis.bundle.scp.css
-C:\Projetos\ilis\obj\Release\net8.0\win-x64\ilis.csproj.CopyComplete
 C:\Projetos\ilis\obj\Release\net8.0\win-x64\ilis.dll
 C:\Projetos\ilis\obj\Release\net8.0\win-x64\refint\ilis.dll
 C:\Projetos\ilis\obj\Release\net8.0\win-x64\ilis.pdb
 C:\Projetos\ilis\obj\Release\net8.0\win-x64\ilis.genruntimeconfig.cache
 C:\Projetos\ilis\obj\Release\net8.0\win-x64\ref\ilis.dll
+C:\Projetos\ilis\bin\Release\net8.0\win-x64\ilis.staticwebassets.endpoints.json
+C:\Projetos\ilis\obj\Release\net8.0\win-x64\staticwebassets.build.endpoints.json
+C:\Projetos\ilis\obj\Release\net8.0\win-x64\staticwebassets\msbuild.ilis.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Projetos\ilis\obj\Release\net8.0\win-x64\staticwebassets.upToDateCheck.txt
+C:\Projetos\ilis\obj\Release\net8.0\win-x64\ilis.csproj.Up2Date

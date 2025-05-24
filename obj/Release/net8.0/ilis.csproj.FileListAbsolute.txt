@@ -74,7 +74,6 @@ C:\Projetos\ilis\bin\Release\net8.0\System.Composition.Runtime.dll
 C:\Projetos\ilis\bin\Release\net8.0\System.Composition.TypedParts.dll
 C:\Projetos\ilis\bin\Release\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Projetos\ilis\bin\Release\net8.0\System.Drawing.Common.dll
-C:\Projetos\ilis\bin\Release\net8.0\System.Formats.Asn1.dll
 C:\Projetos\ilis\bin\Release\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Projetos\ilis\bin\Release\net8.0\System.Memory.Data.dll
 C:\Projetos\ilis\bin\Release\net8.0\System.Reflection.MetadataLoadContext.dll
@@ -252,9 +251,13 @@ C:\Projetos\ilis\obj\Release\net8.0\staticwebassets.pack.json
 C:\Projetos\ilis\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Projetos\ilis\obj\Release\net8.0\scopedcss\bundle\ilis.styles.css
 C:\Projetos\ilis\obj\Release\net8.0\scopedcss\projectbundle\ilis.bundle.scp.css
-C:\Projetos\ilis\obj\Release\net8.0\ilis.csproj.CopyComplete
 C:\Projetos\ilis\obj\Release\net8.0\ilis.dll
 C:\Projetos\ilis\obj\Release\net8.0\refint\ilis.dll
 C:\Projetos\ilis\obj\Release\net8.0\ilis.pdb
 C:\Projetos\ilis\obj\Release\net8.0\ilis.genruntimeconfig.cache
 C:\Projetos\ilis\obj\Release\net8.0\ref\ilis.dll
+C:\Projetos\ilis\bin\Release\net8.0\ilis.staticwebassets.endpoints.json
+C:\Projetos\ilis\obj\Release\net8.0\staticwebassets.build.endpoints.json
+C:\Projetos\ilis\obj\Release\net8.0\staticwebassets\msbuild.ilis.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Projetos\ilis\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
+C:\Projetos\ilis\obj\Release\net8.0\ilis.csproj.Up2Date
